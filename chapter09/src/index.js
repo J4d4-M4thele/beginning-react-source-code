@@ -10,13 +10,7 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCi0jQDgGXE4-nh4gW7-2nWx_aUXek1NgQ",
-  authDomain: "crud-project-1dcfe.firebaseapp.com",
-  projectId: "crud-project-1dcfe",
-  storageBucket: "crud-project-1dcfe.appspot.com",
-  messagingSenderId: "849432844176",
-  appId: "1:849432844176:web:200395fffc9e128c1e4515",
-  measurementId: "G-9MBLCSDXNT"
+  //firebase config values
 };
 
 firebase.initializeApp(firebaseConfig);
