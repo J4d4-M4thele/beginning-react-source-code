@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
 import useFetch from './useFetch';
-import Users from './Users';
+// import Users from './Users';
 
 const App = () => {
+  const usersUrl = 'https://jsonplaceholder.typicode.com/users';
   const postsUrl = 'https://jsonplaceholder.typicode.com/posts';
   const todosUrl = 'https://jsonplaceholder.typicode.com/todos';
   //initial state
@@ -22,7 +23,11 @@ const App = () => {
 
   return (
     <div>
-      <Users />
+      {/* <Users /> */}
+      {/* displays data from the users collection */}
+      <Button variant="link" onClick={() => setRequested(usersUrl)}>
+        Users
+      </Button>
       {/* displays data from the posts collection */}
       <Button variant="link" onClick={() => setRequested(postsUrl)}>
         Posts
@@ -35,8 +40,8 @@ const App = () => {
       Requested: {requested}
       <ul>
         {data.map(el => (
-          <li key={el.id}>{el.title}</li>
-        ))}
+            <li key={el.id}>{el.title || el.name}</li>
+          ))}
       </ul>
     </div>
   );
